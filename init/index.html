@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>Demo 1</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/ext-all.js"
+		integrity="sha512-9/PSAauo3WWhJZfCNwqWlD4l8+Bwr+WTYmhCyiwQ0ifC/0IA+o1nwidrkAMfZTkchgs/S/+ExhKEYg1e6KiXgQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/extjs/4.2.1/resources/ext-theme-neptune/ext-theme-neptune-all.min.css"
+		integrity="sha512-1vW1MVEPaKnaZOB4YQYO0OcDIc4oYJeN6NXz3wPGKXcfSsh7na1tpzTqjwzQftRMvduty1/r7NBkDkFX7Ir4Xw=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<script type="text/javascript">
+		Ext.application({
+			name: "MyApp",
+			launch: function () {
+				Ext.create('Ext.container.Viewport', {
+					items: [
+						{
+							xtype: 'component',
+							html: '<p>If you click on me, I will disappear.</p>',
+							listeners: {
+								click: {
+									element: 'el',
+									fn: function () {
+										this.hide();
+									}
+								}
+							}
+						}
+					]
+
+				});
+			}
+		});
+	</script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
